@@ -12,12 +12,12 @@
     "preserveOutput": "always",
     "projects": [
       {
-        "outputDir": "C:/Users/MyPC/Documents/GitHub/AutoDemo/learn-playwright/test-results",
+        "outputDir": "c:/Users/MyPC/Documents/GitHub/AutoDemo/learn-playwright/test-results",
         "repeatEach": 1,
         "retries": 0,
         "id": "chromium",
         "name": "chromium",
-        "testDir": "C:/Users/MyPC/Documents/GitHub/AutoDemo/learn-playwright/tests",
+        "testDir": "c:/Users/MyPC/Documents/GitHub/AutoDemo/learn-playwright/tests",
         "testIgnore": [],
         "testMatch": [
           "**/?(*.)@(spec|test).*"
@@ -25,12 +25,12 @@
         "timeout": 30000
       },
       {
-        "outputDir": "C:/Users/MyPC/Documents/GitHub/AutoDemo/learn-playwright/test-results",
+        "outputDir": "c:/Users/MyPC/Documents/GitHub/AutoDemo/learn-playwright/test-results",
         "repeatEach": 1,
         "retries": 0,
         "id": "firefox",
         "name": "firefox",
-        "testDir": "C:/Users/MyPC/Documents/GitHub/AutoDemo/learn-playwright/tests",
+        "testDir": "c:/Users/MyPC/Documents/GitHub/AutoDemo/learn-playwright/tests",
         "testIgnore": [],
         "testMatch": [
           "**/?(*.)@(spec|test).*"
@@ -38,12 +38,12 @@
         "timeout": 30000
       },
       {
-        "outputDir": "C:/Users/MyPC/Documents/GitHub/AutoDemo/learn-playwright/test-results",
+        "outputDir": "c:/Users/MyPC/Documents/GitHub/AutoDemo/learn-playwright/test-results",
         "repeatEach": 1,
         "retries": 0,
         "id": "webkit",
         "name": "webkit",
-        "testDir": "C:/Users/MyPC/Documents/GitHub/AutoDemo/learn-playwright/tests",
+        "testDir": "c:/Users/MyPC/Documents/GitHub/AutoDemo/learn-playwright/tests",
         "testIgnore": [],
         "testMatch": [
           "**/?(*.)@(spec|test).*"
@@ -73,8 +73,8 @@
       "max": 5,
       "threshold": 15000
     },
-    "configFile": "C:\\Users\\MyPC\\Documents\\GitHub\\AutoDemo\\learn-playwright\\playwright.config.ts",
-    "rootDir": "C:/Users/MyPC/Documents/GitHub/AutoDemo/learn-playwright/tests",
+    "configFile": "c:\\Users\\MyPC\\Documents\\GitHub\\AutoDemo\\learn-playwright\\playwright.config.ts",
+    "rootDir": "c:/Users/MyPC/Documents/GitHub/AutoDemo/learn-playwright/tests",
     "quiet": false,
     "shard": null,
     "updateSnapshots": "missing",
@@ -84,13 +84,13 @@
   },
   "suites": [
     {
-      "title": "login.spec.ts",
-      "file": "login.spec.ts",
+      "title": "iframe.spec.ts",
+      "file": "iframe.spec.ts",
       "column": 0,
       "line": 0,
       "specs": [
         {
-          "title": "login script 1",
+          "title": "inner iFrame",
           "ok": true,
           "tags": [],
           "tests": [
@@ -104,118 +104,26 @@
                 {
                   "workerIndex": 0,
                   "status": "passed",
-                  "duration": 11343,
+                  "duration": 4121,
                   "errors": [],
                   "stdout": [
                     {
-                      "text": "id=input-email\n"
+                      "text": "Count of frames in this page: 13\n"
                     }
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2023-02-15T07:03:13.373Z",
+                  "startTime": "2023-02-15T08:11:07.894Z",
                   "attachments": []
                 }
               ],
               "status": "expected"
             }
           ],
-          "id": "41d3fd2474a19feb00a1-321cd1bc95ca60d9da8b",
-          "file": "login.spec.ts",
-          "line": 4,
-          "column": 5
-        },
-        {
-          "title": "login script 1",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "firefox",
-              "projectName": "firefox",
-              "results": [
-                {
-                  "workerIndex": 1,
-                  "status": "passed",
-                  "duration": 14679,
-                  "errors": [],
-                  "stdout": [
-                    {
-                      "text": "id=input-email\n"
-                    }
-                  ],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2023-02-15T07:03:13.378Z",
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "41d3fd2474a19feb00a1-c0176d084d12ef30a67d",
-          "file": "login.spec.ts",
-          "line": 4,
-          "column": 5
-        },
-        {
-          "title": "login script 1",
-          "ok": false,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "webkit",
-              "projectName": "webkit",
-              "results": [
-                {
-                  "workerIndex": 2,
-                  "status": "timedOut",
-                  "duration": 30015,
-                  "error": {
-                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
-                  },
-                  "errors": [
-                    {
-                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
-                    },
-                    {
-                      "location": {
-                        "file": "C:\\Users\\MyPC\\Documents\\GitHub\\AutoDemo\\learn-playwright\\tests\\login.spec.ts",
-                        "column": 16,
-                        "line": 10
-                      },
-                      "message": "page.goto: Navigation failed because page was closed!\n=========================== logs ===========================\nnavigating to \"https://ecommerce-playground.lambdatest.io/\", waiting until \"load\"\n============================================================\n\n\u001b[90m   at \u001b[39mlogin.spec.ts:10\n\n\u001b[0m \u001b[90m  8 |\u001b[39m     \u001b[36mconst\u001b[39m loginPage \u001b[33m=\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mLoginPage\u001b[39m()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m  9 |\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 10 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'https://ecommerce-playground.lambdatest.io/'\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 11 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mhover(\u001b[32m\"//a[@data-toggle='dropdown']//span[contains(., 'My account')]\"\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 12 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mclick(\u001b[32m\"text = Login\"\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 13 |\u001b[39m     \u001b[90m//await page.waitForTimeout(30000);\u001b[39m\u001b[0m\n\n\u001b[2m    at C:\\Users\\MyPC\\Documents\\GitHub\\AutoDemo\\learn-playwright\\tests\\login.spec.ts:10:16\u001b[22m"
-                    },
-                    {
-                      "message": "Pending operations:\n  - page.goto at tests\\login.spec.ts:10:16\n"
-                    }
-                  ],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2023-02-15T07:03:13.404Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "C:\\Users\\MyPC\\Documents\\GitHub\\AutoDemo\\learn-playwright\\test-results\\login-login-script-1-webkit\\test-failed-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "unexpected"
-            }
-          ],
-          "id": "41d3fd2474a19feb00a1-1783b0ec3032db6e6957",
-          "file": "login.spec.ts",
-          "line": 4,
-          "column": 5
+          "id": "00c842d2a0f464768682-ef95e98bd6220541e3df",
+          "file": "iframe.spec.ts",
+          "line": 33,
+          "column": 6
         }
       ]
     }
