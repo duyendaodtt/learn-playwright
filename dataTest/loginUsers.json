@@ -1,0 +1,11 @@
+{
+    "loginPass": {
+        "userName": "test1223",
+        "password": "test@111111"
+    },
+    "loginFail": {
+        "notExistedUserName": "test1223",
+        "notMatchedPassword": "test@111111",
+        "inactiveUsername": "test2222"
+    }
+}
