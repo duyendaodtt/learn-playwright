@@ -18,3 +18,10 @@ CMD :
     Runs the tests in a specific file.
 
    npx playwright show-report
+
+debug mode: 
+ npx playwright test login.spec.ts --project=chromium --headed
+
+  https://dev135245.service-now.com/
+   Username: admin
+Current password: zt=*o4sSMMO8

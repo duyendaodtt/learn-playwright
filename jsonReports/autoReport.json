@@ -17,38 +17,12 @@
         "retries": 0,
         "id": "chromium",
         "name": "chromium",
-        "testDir": "C:/Users/DELL/Documents/GitHub/learn-playwright/tests",
+        "testDir": "C:/Users/DELL/Documents/GitHub/learn-playwright",
         "testIgnore": [],
         "testMatch": [
           "**/?(*.)@(spec|test).*"
         ],
-        "timeout": 30000
-      },
-      {
-        "outputDir": "C:/Users/DELL/Documents/GitHub/learn-playwright/test-results",
-        "repeatEach": 1,
-        "retries": 0,
-        "id": "firefox",
-        "name": "firefox",
-        "testDir": "C:/Users/DELL/Documents/GitHub/learn-playwright/tests",
-        "testIgnore": [],
-        "testMatch": [
-          "**/?(*.)@(spec|test).*"
-        ],
-        "timeout": 30000
-      },
-      {
-        "outputDir": "C:/Users/DELL/Documents/GitHub/learn-playwright/test-results",
-        "repeatEach": 1,
-        "retries": 0,
-        "id": "webkit",
-        "name": "webkit",
-        "testDir": "C:/Users/DELL/Documents/GitHub/learn-playwright/tests",
-        "testIgnore": [],
-        "testMatch": [
-          "**/?(*.)@(spec|test).*"
-        ],
-        "timeout": 30000
+        "timeout": 60000
       }
     ],
     "reporter": [
@@ -74,7 +48,7 @@
       "threshold": 15000
     },
     "configFile": "C:\\Users\\DELL\\Documents\\GitHub\\learn-playwright\\playwright.config.ts",
-    "rootDir": "C:/Users/DELL/Documents/GitHub/learn-playwright/tests",
+    "rootDir": "C:/Users/DELL/Documents/GitHub/learn-playwright",
     "quiet": false,
     "shard": null,
     "updateSnapshots": "missing",
@@ -84,18 +58,18 @@
   },
   "suites": [
     {
-      "title": "multiTabs.spec.js",
-      "file": "multiTabs.spec.js",
+      "title": "tests\\login.spec.ts",
+      "file": "tests/login.spec.ts",
       "column": 0,
       "line": 0,
       "specs": [
         {
-          "title": "multiple tabs 1",
+          "title": "LC03 - Verify hidden button",
           "ok": true,
           "tags": [],
           "tests": [
             {
-              "timeout": 30000,
+              "timeout": 60000,
               "annotations": [],
               "expectedStatus": "passed",
               "projectId": "chromium",
@@ -104,107 +78,54 @@
                 {
                   "workerIndex": 0,
                   "status": "passed",
-                  "duration": 2631,
+                  "duration": 9145,
                   "errors": [],
-                  "stdout": [
-                    {
-                      "text": "https://www.lambdatest.com/selenium-playground/window-popup-modal-demo\n"
-                    },
-                    {
-                      "text": "https://twitter.com/Lambdatesting\n"
-                    }
-                  ],
+                  "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2023-02-16T07:30:57.825Z",
+                  "startTime": "2023-04-25T10:58:37.085Z",
                   "attachments": []
                 }
               ],
               "status": "expected"
             }
           ],
-          "id": "5cebda8288bd6ae22c7e-91f3cc9e047b1cfab9ed",
-          "file": "multiTabs.spec.js",
-          "line": 3,
-          "column": 5
+          "id": "6b6dc33e290e5a0a43b1-194244a446d91bcbefd0",
+          "file": "tests/login.spec.ts",
+          "line": 14,
+          "column": 6
         },
         {
-          "title": "multiple tabs 1",
+          "title": "LC02- Verify label of textbox in login form",
           "ok": true,
           "tags": [],
           "tests": [
             {
-              "timeout": 30000,
+              "timeout": 60000,
               "annotations": [],
               "expectedStatus": "passed",
-              "projectId": "firefox",
-              "projectName": "firefox",
+              "projectId": "chromium",
+              "projectName": "chromium",
               "results": [
                 {
                   "workerIndex": 1,
                   "status": "passed",
-                  "duration": 7109,
+                  "duration": 12684,
                   "errors": [],
-                  "stdout": [
-                    {
-                      "text": "https://www.lambdatest.com/selenium-playground/window-popup-modal-demo\n"
-                    },
-                    {
-                      "text": "https://twitter.com/Lambdatesting\n"
-                    }
-                  ],
+                  "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2023-02-16T07:30:57.820Z",
+                  "startTime": "2023-04-25T10:58:37.087Z",
                   "attachments": []
                 }
               ],
               "status": "expected"
             }
           ],
-          "id": "5cebda8288bd6ae22c7e-3524fc5f73c7d58cddff",
-          "file": "multiTabs.spec.js",
-          "line": 3,
-          "column": 5
-        },
-        {
-          "title": "multiple tabs 1",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "webkit",
-              "projectName": "webkit",
-              "results": [
-                {
-                  "workerIndex": 2,
-                  "status": "passed",
-                  "duration": 6403,
-                  "errors": [],
-                  "stdout": [
-                    {
-                      "text": "https://www.lambdatest.com/selenium-playground/window-popup-modal-demo\n"
-                    },
-                    {
-                      "text": "https://twitter.com/Lambdatesting\n"
-                    }
-                  ],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2023-02-16T07:30:57.841Z",
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "5cebda8288bd6ae22c7e-08e0fc98838cb594986c",
-          "file": "multiTabs.spec.js",
-          "line": 3,
-          "column": 5
+          "id": "6b6dc33e290e5a0a43b1-29227b29420f9ceb575a",
+          "file": "tests/login.spec.ts",
+          "line": 18,
+          "column": 6
         }
       ]
     }

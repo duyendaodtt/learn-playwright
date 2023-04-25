@@ -18,14 +18,18 @@ export default class RegisterPage {
                     .type(email);
     };
     async selectCountry(countryName: string) {
-        await this.page.selectOption(RegisterPageLocator.countrySelector, countryName);
+        // await this.page.selectOption(RegisterPageLocator.countrySelector, countryName);
+        await this.page.locator("select")
+                        .locator('option', {
+                            hasText: countryName
+                        })
     };
     async enterPassword(password: string){
-        await this.page.getByPlaceholder(RegisterPageLocator.passwordField)
+        await this.page.locator(RegisterPageLocator.passwordField)
                     .fill(password);
     };
     async enterConfirmPassword(confirmPassword: string){
-        await this.page.getByPlaceholder(RegisterPageLocator.confirmPasswordField)
+        await this.page.locator(RegisterPageLocator.confirmPasswordField)
                     .fill(confirmPassword);
     };
     async clickCaptchaCheckbox(){
