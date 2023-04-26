@@ -1,5 +1,5 @@
 export default class RegisterPageLocator {
-    static firstNameField = 'id=firstName';
+    static fullNameField = 'id=name';
     static lastNameField = 'id=lastName';
     static emailField = 'id=email';
     static countrySelector = 'id=country';

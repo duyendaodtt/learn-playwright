@@ -1,6 +1,6 @@
 import { test, expect, type Page } from '@playwright/test';
-import { CommonFunction } from './commonFunc';
-import  LoginLocatorPage  from '../../webElement/loginPageLocator';
+import { CommonFunction } from '../tests/POM/commonFunc';
+import  LoginLocatorPage  from '../webElement/loginPageLocator';
 
 export default class LoginPage {
     constructor (public page: Page){
