@@ -3,6 +3,7 @@ Install guide:
 - install plugin: Playwright test for vs code
   - using cltr ship P => install playwright (not check use js)
 - install run test plugin: playwright test runner, playwright test
+- npm install mocha --save-dev
 
 Config:
 - run debug mode: config -> use -> input: headless: false,

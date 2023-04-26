@@ -3,9 +3,11 @@ import { CommonFunction } from './commonFunc';
 import  LoginLocatorPage  from '../../webElement/loginPageLocator';
 
 export default class LoginPage {
+    
     constructor (public page: Page){
-
+        
     };
+
     async enterUsername(userName: string) {
         // await this.page.locator(LoginLocatorPage.userNameField).click()
         // await this.page.locator(LoginLocatorPage.userNameField)
@@ -34,5 +36,8 @@ export default class LoginPage {
         // await this.page.fill(LoginLocatorPage.userNameField,userName); //using id
         // await this.page.getByPlaceholder(LoginLocatorPage.pwField).fill(pass); //using placehoder value
         // await this.page.click(LoginLocatorPage.submitButton); //using xpath locator
+    }
+    async clickHidePwBtn(){
+        await this.page.click(LoginLocatorPage.hiddenBtn);
     }
 }
