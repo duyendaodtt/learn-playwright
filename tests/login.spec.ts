@@ -1,5 +1,5 @@
 import {chromium, test, expect, Page} from "@playwright/test";
-import  LoginPage from "./POM/loginPage";
+import  LoginPage from "../POM/loginPage";
 import LoginLocatorPage from "../webElement/loginPageLocator";
 import CommonFunction from "./POM/commonFunc"
 
