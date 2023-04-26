@@ -17,38 +17,12 @@
         "retries": 0,
         "id": "chromium",
         "name": "chromium",
-        "testDir": "C:/Users/DELL/Documents/GitHub/learn-playwright/tests",
+        "testDir": "C:/Users/DELL/Documents/GitHub/learn-playwright",
         "testIgnore": [],
         "testMatch": [
           "**/?(*.)@(spec|test).*"
         ],
-        "timeout": 30000
-      },
-      {
-        "outputDir": "C:/Users/DELL/Documents/GitHub/learn-playwright/test-results",
-        "repeatEach": 1,
-        "retries": 0,
-        "id": "firefox",
-        "name": "firefox",
-        "testDir": "C:/Users/DELL/Documents/GitHub/learn-playwright/tests",
-        "testIgnore": [],
-        "testMatch": [
-          "**/?(*.)@(spec|test).*"
-        ],
-        "timeout": 30000
-      },
-      {
-        "outputDir": "C:/Users/DELL/Documents/GitHub/learn-playwright/test-results",
-        "repeatEach": 1,
-        "retries": 0,
-        "id": "webkit",
-        "name": "webkit",
-        "testDir": "C:/Users/DELL/Documents/GitHub/learn-playwright/tests",
-        "testIgnore": [],
-        "testMatch": [
-          "**/?(*.)@(spec|test).*"
-        ],
-        "timeout": 30000
+        "timeout": 60000
       }
     ],
     "reporter": [
@@ -74,7 +48,7 @@
       "threshold": 15000
     },
     "configFile": "C:\\Users\\DELL\\Documents\\GitHub\\learn-playwright\\playwright.config.ts",
-    "rootDir": "C:/Users/DELL/Documents/GitHub/learn-playwright/tests",
+    "rootDir": "C:/Users/DELL/Documents/GitHub/learn-playwright",
     "quiet": false,
     "shard": null,
     "updateSnapshots": "missing",
@@ -84,127 +58,55 @@
   },
   "suites": [
     {
-      "title": "multiTabs.spec.js",
-      "file": "multiTabs.spec.js",
+      "title": "tests\\login.spec.ts",
+      "file": "tests/login.spec.ts",
       "column": 0,
       "line": 0,
-      "specs": [
+      "specs": [],
+      "suites": [
         {
-          "title": "multiple tabs 1",
-          "ok": true,
-          "tags": [],
-          "tests": [
+          "title": "Test suite: Login",
+          "file": "tests/login.spec.ts",
+          "line": 10,
+          "column": 6,
+          "specs": [
             {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
+              "title": "Verify Hidden button after first clicking",
+              "ok": true,
+              "tags": [],
+              "tests": [
                 {
-                  "workerIndex": 0,
-                  "status": "passed",
-                  "duration": 2631,
-                  "errors": [],
-                  "stdout": [
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
                     {
-                      "text": "https://www.lambdatest.com/selenium-playground/window-popup-modal-demo\n"
-                    },
-                    {
-                      "text": "https://twitter.com/Lambdatesting\n"
+                      "workerIndex": 0,
+                      "status": "passed",
+                      "duration": 9391,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Test3335\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2023-04-26T04:52:15.261Z",
+                      "attachments": []
                     }
                   ],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2023-02-16T07:30:57.825Z",
-                  "attachments": []
+                  "status": "expected"
                 }
               ],
-              "status": "expected"
+              "id": "6b6dc33e290e5a0a43b1-3f74af737dfe697191d8",
+              "file": "tests/login.spec.ts",
+              "line": 32,
+              "column": 10
             }
-          ],
-          "id": "5cebda8288bd6ae22c7e-91f3cc9e047b1cfab9ed",
-          "file": "multiTabs.spec.js",
-          "line": 3,
-          "column": 5
-        },
-        {
-          "title": "multiple tabs 1",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "firefox",
-              "projectName": "firefox",
-              "results": [
-                {
-                  "workerIndex": 1,
-                  "status": "passed",
-                  "duration": 7109,
-                  "errors": [],
-                  "stdout": [
-                    {
-                      "text": "https://www.lambdatest.com/selenium-playground/window-popup-modal-demo\n"
-                    },
-                    {
-                      "text": "https://twitter.com/Lambdatesting\n"
-                    }
-                  ],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2023-02-16T07:30:57.820Z",
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "5cebda8288bd6ae22c7e-3524fc5f73c7d58cddff",
-          "file": "multiTabs.spec.js",
-          "line": 3,
-          "column": 5
-        },
-        {
-          "title": "multiple tabs 1",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "webkit",
-              "projectName": "webkit",
-              "results": [
-                {
-                  "workerIndex": 2,
-                  "status": "passed",
-                  "duration": 6403,
-                  "errors": [],
-                  "stdout": [
-                    {
-                      "text": "https://www.lambdatest.com/selenium-playground/window-popup-modal-demo\n"
-                    },
-                    {
-                      "text": "https://twitter.com/Lambdatesting\n"
-                    }
-                  ],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2023-02-16T07:30:57.841Z",
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "5cebda8288bd6ae22c7e-08e0fc98838cb594986c",
-          "file": "multiTabs.spec.js",
-          "line": 3,
-          "column": 5
+          ]
         }
       ]
     }
