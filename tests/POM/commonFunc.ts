@@ -1,5 +1,5 @@
 import {chromium, test, expect} from "@playwright/test";
-export default class CommonFunction {
+export class CommonFunction {
     async createNewPage(){
         const browser = await chromium.launch();
         const context = await browser.newContext();

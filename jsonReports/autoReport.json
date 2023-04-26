@@ -62,51 +62,70 @@
       "file": "tests/login.spec.ts",
       "column": 0,
       "line": 0,
-      "specs": [],
-      "suites": [
+      "specs": [
         {
-          "title": "Test suite: Login",
-          "file": "tests/login.spec.ts",
-          "line": 10,
-          "column": 6,
-          "specs": [
+          "title": "LC03 - Verify hidden button",
+          "ok": true,
+          "tags": [],
+          "tests": [
             {
-              "title": "Verify Hidden button after first clicking",
-              "ok": true,
-              "tags": [],
-              "tests": [
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
                 {
-                  "timeout": 60000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "status": "passed",
-                      "duration": 9391,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "Test3335\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2023-04-26T04:52:15.261Z",
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 9145,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2023-04-25T10:58:37.085Z",
+                  "attachments": []
                 }
               ],
-              "id": "6b6dc33e290e5a0a43b1-3f74af737dfe697191d8",
-              "file": "tests/login.spec.ts",
-              "line": 32,
-              "column": 10
+              "status": "expected"
             }
-          ]
+          ],
+          "id": "6b6dc33e290e5a0a43b1-194244a446d91bcbefd0",
+          "file": "tests/login.spec.ts",
+          "line": 14,
+          "column": 6
+        },
+        {
+          "title": "LC02- Verify label of textbox in login form",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "status": "passed",
+                  "duration": 12684,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2023-04-25T10:58:37.087Z",
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6b6dc33e290e5a0a43b1-29227b29420f9ceb575a",
+          "file": "tests/login.spec.ts",
+          "line": 18,
+          "column": 6
         }
       ]
     }
