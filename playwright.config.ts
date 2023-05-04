@@ -44,7 +44,8 @@ export default defineConfig({
     /* Maximum time each action such as `click()` can take. Defaults to 0 (no limit). */
     actionTimeout: 0,
     /* Base URL to use in actions like `await page.goto('/')`. */
-    baseURL: 'https://signon.service-now.com/x_snc_sso_auth.do#/sign-up',
+    //baseURL: 'https://signon.service-now.com/x_snc_sso_auth.do#/sign-up',
+    baseURL: 'https://dev61809.service-now.com/',
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
