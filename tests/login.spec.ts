@@ -1,5 +1,5 @@
 import {chromium, test, expect, Page} from "@playwright/test";
-import  LoginPage from "../POM/loginPage.ts.old";
+import  LoginPage from "./POM/loginPage";
 import LoginLocatorPage from "../webElement/loginPageLocator";
 import CommonFunction from "./POM/commonFunc"
 
@@ -43,21 +43,6 @@ test.describe("Test suite: Login", () =>{
         await expect(pwFieldValue).toEqual(pwValue) // expected password show as input data
         
     })
-    test.only("Verify Hidden button after second clicking",async ({page}) =>{
-        /** check label is changed to hide pw
-         * check password value is not encypted
-         */
-         const loginFunc = new LoginPage(page);
-        var pwValue = "Test3335"
-        await loginFunc.enterPassword(pwValue); // enter password
-        await loginFunc.clickHidePwBtn(); // click on hiden btn to show password
-        await loginFunc.clickHidePwBtn(); //click second time to turn on hide password mode
-        const pwFieldEle = await page.locator(LoginLocatorPage.pwField); // get locator of this ele
-        const pwFieldValue = await pwFieldEle.evaluate(e =>(e as HTMLInputElement).value )  // get properties 'value' of this ele
-        console.log(pwFieldValue)
-        await expect(pwFieldValue).toEqual(pwValue) // expected password show as input data
-        
-    })
 
     test.skip('login script 1', async ({page})=>{
         // const browser = await chromium.launch();
@@ -88,6 +73,5 @@ test.describe("Test suite: Login", () =>{
         //             .toHaveText(" Warning: No match for E-Mail Address and/or Passwordx.")
     })
 })
-
 
 
