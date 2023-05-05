@@ -38,6 +38,6 @@ export default class LoginPage {
         // await this.page.click(LoginLocatorPage.submitButton); //using xpath locator
     }
     async clickHidePwBtn(){
-        await this.page.click(LoginLocatorPage.hiddenBtn);
+        await this.page.click(LoginLocatorPage.hiddenBtn,{ force: true});
     }
 }

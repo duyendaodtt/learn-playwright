@@ -12,12 +12,12 @@
     "preserveOutput": "always",
     "projects": [
       {
-        "outputDir": "C:/Users/DELL/Documents/GitHub/learn-playwright/test-results",
+        "outputDir": "C:/Users/MyPC/Documents/GitHub/AutoDemo/learn-playwright/test-results",
         "repeatEach": 1,
         "retries": 0,
         "id": "chromium",
         "name": "chromium",
-        "testDir": "C:/Users/DELL/Documents/GitHub/learn-playwright",
+        "testDir": "C:/Users/MyPC/Documents/GitHub/AutoDemo/learn-playwright/tests",
         "testIgnore": [],
         "testMatch": [
           "**/?(*.)@(spec|test).*"
@@ -47,8 +47,8 @@
       "max": 5,
       "threshold": 15000
     },
-    "configFile": "C:\\Users\\DELL\\Documents\\GitHub\\learn-playwright\\playwright.config.ts",
-    "rootDir": "C:/Users/DELL/Documents/GitHub/learn-playwright",
+    "configFile": "C:\\Users\\MyPC\\Documents\\GitHub\\AutoDemo\\learn-playwright\\playwright.config.ts",
+    "rootDir": "C:/Users/MyPC/Documents/GitHub/AutoDemo/learn-playwright/tests",
     "quiet": false,
     "shard": null,
     "updateSnapshots": "missing",
@@ -58,74 +58,69 @@
   },
   "suites": [
     {
-      "title": "tests\\login.spec.ts",
-      "file": "tests/login.spec.ts",
+      "title": "login.spec.ts",
+      "file": "login.spec.ts",
       "column": 0,
       "line": 0,
-      "specs": [
+      "specs": [],
+      "suites": [
         {
-          "title": "LC03 - Verify hidden button",
-          "ok": true,
-          "tags": [],
-          "tests": [
+          "title": "Login Nagative case",
+          "file": "login.spec.ts",
+          "line": 94,
+          "column": 6,
+          "specs": [
             {
-              "timeout": 60000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
+              "title": "Only input username field",
+              "ok": false,
+              "tags": [],
+              "tests": [
                 {
-                  "workerIndex": 0,
-                  "status": "passed",
-                  "duration": 9145,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2023-04-25T10:58:37.085Z",
-                  "attachments": []
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "status": "failed",
+                      "duration": 10515,
+                      "error": {
+                        "message": "page.waitForSelector: Target closed\n=========================== logs ===========================\nwaiting for locator('.dp-invalid-login-msg') to be visible\n============================================================",
+                        "stack": "page.waitForSelector: Target closed\n=========================== logs ===========================\nwaiting for locator('.dp-invalid-login-msg') to be visible\n============================================================\n    at C:\\Users\\MyPC\\Documents\\GitHub\\AutoDemo\\learn-playwright\\tests\\login.spec.ts:107:20"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\MyPC\\Documents\\GitHub\\AutoDemo\\learn-playwright\\tests\\login.spec.ts",
+                            "column": 20,
+                            "line": 107
+                          },
+                          "message": "page.waitForSelector: Target closed\n=========================== logs ===========================\nwaiting for locator('.dp-invalid-login-msg') to be visible\n============================================================\n\n\u001b[90m   at \u001b[39mlogin.spec.ts:107\n\n\u001b[0m \u001b[90m 105 |\u001b[39m         \u001b[36mawait\u001b[39m loginPage\u001b[33m.\u001b[39menterUsername(\u001b[33mVaribales\u001b[39m\u001b[33m.\u001b[39musername)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 106 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[33mLoginLocatorPage\u001b[39m\u001b[33m.\u001b[39msubmitButton)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 107 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForSelector(\u001b[33mLoginLocatorPage\u001b[39m\u001b[33m.\u001b[39minvalidAccErrMes)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m     |\u001b[39m                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 108 |\u001b[39m         expect(page\u001b[33m.\u001b[39mlocator(\u001b[33mLoginLocatorPage\u001b[39m\u001b[33m.\u001b[39minvalidAccErrMes))\u001b[33m.\u001b[39mtoHaveText(errMess)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 109 |\u001b[39m     })\u001b[0m\n\u001b[0m \u001b[90m 110 |\u001b[39m })\u001b[0m\n\n\u001b[2m    at C:\\Users\\MyPC\\Documents\\GitHub\\AutoDemo\\learn-playwright\\tests\\login.spec.ts:107:20\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2023-05-05T04:07:11.861Z",
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "C:\\Users\\MyPC\\Documents\\GitHub\\AutoDemo\\learn-playwright\\tests\\login.spec.ts",
+                        "column": 20,
+                        "line": 107
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
                 }
               ],
-              "status": "expected"
+              "id": "41d3fd2474a19feb00a1-e11a6e7d71c4fce98335",
+              "file": "login.spec.ts",
+              "line": 102,
+              "column": 10
             }
-          ],
-          "id": "6b6dc33e290e5a0a43b1-194244a446d91bcbefd0",
-          "file": "tests/login.spec.ts",
-          "line": 14,
-          "column": 6
-        },
-        {
-          "title": "LC02- Verify label of textbox in login form",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 60000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 1,
-                  "status": "passed",
-                  "duration": 12684,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2023-04-25T10:58:37.087Z",
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "6b6dc33e290e5a0a43b1-29227b29420f9ceb575a",
-          "file": "tests/login.spec.ts",
-          "line": 18,
-          "column": 6
+          ]
         }
       ]
     }

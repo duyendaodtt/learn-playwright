@@ -23,5 +23,5 @@ debug mode:
  npx playwright test login.spec.ts --project=chromium --headed
 
   https://dev135245.service-now.com/
-   Username: admin
-Current password: zt=*o4sSMMO8
+  Username: admin
+Current password: vvSgj$S1%AE9

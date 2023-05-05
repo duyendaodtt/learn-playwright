@@ -1,13 +1,13 @@
 import {chromium, test, expect, Page} from "@playwright/test";
 import  LoginPage from "./POM/loginPage";
 import LoginLocatorPage from "../webElement/loginPageLocator";
-import CommonFunction from "./POM/commonFunc"
+import Varibales from './POM/variables';
 
 test.beforeEach( async ({page}) =>{
     await page.goto('/');
     
 })
-test.describe("Test suite: Login", () =>{
+test.describe("Verify Login form", () =>{
     // const commonFunc = new CommonFunction();
     // const _page = commonFunc.createNewPage();
     // const loginFunc = new LoginPage(_page);
@@ -17,11 +17,11 @@ test.describe("Test suite: Login", () =>{
         expect(pageTitle).toContain('Log in');
         expect(await page.title()).toContain('ServiceNow');
     })
-    test('LC03 - Verify hidden button', async({page}) =>{
+    test('LC02 - Verify hidden button', async({page}) =>{
         expect(await page.$(LoginLocatorPage.hiddenBtn)).not.toBeNull();
         expect(await page.locator(LoginLocatorPage.hiddenBtn).isVisible()).toBe(true);
     })
-    test('LC02- Verify label of textbox in login form', async({page}) =>{
+    test('LC03 - Verify label of textbox in login form', async({page}) =>{
         var parentUsernameTextbox = await page.$(LoginLocatorPage.labelUsernameField);
         // console.log(LoginLocatorPage.labelUsernameField)
          expect(await parentUsernameTextbox?.$eval('.control-label', node => node.textContent)).toEqual("User name");
@@ -29,7 +29,7 @@ test.describe("Test suite: Login", () =>{
         //expect(await parentPwTextbox?.$eval('.control-label', node => (node as HTMLElement).innerText)).toEqual("Password"); // return error = undefined
          expect(await parentPwTextbox?.$eval('.control-label', node => node.textContent)).toEqual("Password")          
     })
-    test.only("Verify Hidden button after first clicking",async ({page}) =>{
+    test("LC04 - Verify Hidden button after first clicking",async ({page}) =>{
         /** check label is changed to hide pw
          * check password value is not encypted
          */
@@ -39,12 +39,30 @@ test.describe("Test suite: Login", () =>{
         await loginFunc.clickHidePwBtn(); // click on hiden btn to show password
         const pwFieldEle = await page.locator(LoginLocatorPage.pwField); // get locator of this ele
         const pwFieldValue = await pwFieldEle.evaluate(e =>(e as HTMLInputElement).value )  // get properties 'value' of this ele
-        console.log(pwFieldValue)
+        //console.log(pwFieldValue)
         await expect(pwFieldValue).toEqual(pwValue) // expected password show as input data
         
     })
-
-    test.skip('login script 1', async ({page})=>{
+    test("LC05 - Verify Hidden button function after second clicking",async ({page}) =>{
+        /** check label is changed to hide pw
+         * check password value is not encypted
+         */
+         const loginFunc = new LoginPage(page);
+        //  const commonFunc = new CommonFunction(page);
+        var pwValue = "Test3335"
+        await loginFunc.enterPassword(pwValue); // enter password
+        await loginFunc.clickHidePwBtn(); // click on hiden btn to show password
+        await page.waitForSelector(LoginLocatorPage.hiddenBtn);
+        await loginFunc.clickHidePwBtn(); // click on hiden btn to turn on hide pw mode
+        const pwFieldEle = await page.locator(LoginLocatorPage.pwField); // get locator of this ele
+        expect(await pwFieldEle.getAttribute('type')).toBe('password')
+        //let isEncryptPw = await commonFunc.checkEncrypt(inputPwValue) // check if pw is encrypt true or false
+         //expect(await isEncryptPw).toBe(true);
+    })
+    
+})
+test.describe("Login Positive case", ()=>{
+    test('login script 1', async ({page})=>{
         // const browser = await chromium.launch();
         // const context = await browser.newContext();
         // const page = await context.newPage();
@@ -64,7 +82,7 @@ test.describe("Test suite: Login", () =>{
             // await loginPage.enterPassword('123456')
             // await loginPage.submitLogin();
             // await page.waitForTimeout(5000);
-            await loginPage.submitLoginForm('admin', 'zt=*o4sSMMO8');
+            await loginPage.submitLoginForm(Varibales.username, Varibales.password);
         
         // let errorMessLocator = "//div[@id='account-login']//div[(text()=' Warning: No match for E-Mail Address and/or Password.')]";
         // //await page.locator(errorMessLocator).screenshot();
@@ -72,6 +90,34 @@ test.describe("Test suite: Login", () =>{
         // await expect(page.locator("(//div[@id='account-login']//div)[1]"))
         //             .toHaveText(" Warning: No match for E-Mail Address and/or Passwordx.")
     })
+})
+test.describe("Login Nagative case", () =>{
+    test("User clicks on the login button", async({page}) =>{
+        const loginPage = new LoginPage(page);
+        // await loginPage.submitLogin();
+        await page.locator(LoginLocatorPage.submitButton).dblclick();
+        await page.waitForSelector(LoginLocatorPage.errMesLocator);
+        expect (await page.locator(LoginLocatorPage.errMesLocator)).toHaveText('Invalid input in user name!')
+    })
+    test.only("Only input username field", async({page}) =>{
+        const loginPage = new LoginPage(page);
+        var errMess = "User name or password invalid. To reset your admin password click "
+        await loginPage.enterUsername(Varibales.username);
+        await page.locator(LoginLocatorPage.submitButton).dblclick();
+        await page.waitForSelector(LoginLocatorPage.invalidAccErrMes);
+        expect(page.locator(LoginLocatorPage.invalidAccErrMes)).toHaveText(errMess);
+    })
+})
+test.describe("After Login successfully", ()=>{
+    test("LGC06 - Verify language dropdown has label of Language", async({page}) =>{
+        const login = new LoginPage(page);
+        await login.submitLoginForm(Varibales.username, Varibales.password);
+        await page.locator('.concourse-pickers').click(); 
+        //check if text for button is visible after clicking language icon or not
+        expect(await page.locator('.label').getByText('Application scope: Global')).toBeVisible() 
+    })
+
+    
 })
 
 
