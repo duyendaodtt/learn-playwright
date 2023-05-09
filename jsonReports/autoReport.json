@@ -17,7 +17,7 @@
         "retries": 0,
         "id": "chromium",
         "name": "chromium",
-        "testDir": "C:/Users/MyPC/Documents/GitHub/AutoDemo/learn-playwright/tests",
+        "testDir": "C:/Users/MyPC/Documents/GitHub/AutoDemo/learn-playwright/pomTest",
         "testIgnore": [],
         "testMatch": [
           "**/?(*.)@(spec|test).*"
@@ -48,7 +48,7 @@
       "threshold": 15000
     },
     "configFile": "C:\\Users\\MyPC\\Documents\\GitHub\\AutoDemo\\learn-playwright\\playwright.config.ts",
-    "rootDir": "C:/Users/MyPC/Documents/GitHub/AutoDemo/learn-playwright/tests",
+    "rootDir": "C:/Users/MyPC/Documents/GitHub/AutoDemo/learn-playwright/pomTest",
     "quiet": false,
     "shard": null,
     "updateSnapshots": "missing",
@@ -58,67 +58,58 @@
   },
   "suites": [
     {
-      "title": "login.spec.ts",
-      "file": "login.spec.ts",
+      "title": "forgotPw.spec.ts",
+      "file": "forgotPw.spec.ts",
       "column": 0,
       "line": 0,
       "specs": [],
       "suites": [
         {
-          "title": "Login Nagative case",
-          "file": "login.spec.ts",
-          "line": 94,
+          "title": "Forgot password",
+          "file": "forgotPw.spec.ts",
+          "line": 7,
           "column": 6,
-          "specs": [
+          "specs": [],
+          "suites": [
             {
-              "title": "Only input username field",
-              "ok": false,
-              "tags": [],
-              "tests": [
+              "title": "Scenario: Nagative case",
+              "file": "forgotPw.spec.ts",
+              "line": 80,
+              "column": 10,
+              "specs": [
                 {
-                  "timeout": 60000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
+                  "title": "Check close function after entering invalid format email",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
                     {
-                      "workerIndex": 0,
-                      "status": "failed",
-                      "duration": 10515,
-                      "error": {
-                        "message": "page.waitForSelector: Target closed\n=========================== logs ===========================\nwaiting for locator('.dp-invalid-login-msg') to be visible\n============================================================",
-                        "stack": "page.waitForSelector: Target closed\n=========================== logs ===========================\nwaiting for locator('.dp-invalid-login-msg') to be visible\n============================================================\n    at C:\\Users\\MyPC\\Documents\\GitHub\\AutoDemo\\learn-playwright\\tests\\login.spec.ts:107:20"
-                      },
-                      "errors": [
+                      "timeout": 60000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
                         {
-                          "location": {
-                            "file": "C:\\Users\\MyPC\\Documents\\GitHub\\AutoDemo\\learn-playwright\\tests\\login.spec.ts",
-                            "column": 20,
-                            "line": 107
-                          },
-                          "message": "page.waitForSelector: Target closed\n=========================== logs ===========================\nwaiting for locator('.dp-invalid-login-msg') to be visible\n============================================================\n\n\u001b[90m   at \u001b[39mlogin.spec.ts:107\n\n\u001b[0m \u001b[90m 105 |\u001b[39m         \u001b[36mawait\u001b[39m loginPage\u001b[33m.\u001b[39menterUsername(\u001b[33mVaribales\u001b[39m\u001b[33m.\u001b[39musername)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 106 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[33mLoginLocatorPage\u001b[39m\u001b[33m.\u001b[39msubmitButton)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 107 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForSelector(\u001b[33mLoginLocatorPage\u001b[39m\u001b[33m.\u001b[39minvalidAccErrMes)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m     |\u001b[39m                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 108 |\u001b[39m         expect(page\u001b[33m.\u001b[39mlocator(\u001b[33mLoginLocatorPage\u001b[39m\u001b[33m.\u001b[39minvalidAccErrMes))\u001b[33m.\u001b[39mtoHaveText(errMess)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 109 |\u001b[39m     })\u001b[0m\n\u001b[0m \u001b[90m 110 |\u001b[39m })\u001b[0m\n\n\u001b[2m    at C:\\Users\\MyPC\\Documents\\GitHub\\AutoDemo\\learn-playwright\\tests\\login.spec.ts:107:20\u001b[22m"
+                          "workerIndex": 0,
+                          "status": "passed",
+                          "duration": 7903,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2023-05-09T06:14:37.464Z",
+                          "attachments": []
                         }
                       ],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2023-05-05T04:07:11.861Z",
-                      "attachments": [],
-                      "errorLocation": {
-                        "file": "C:\\Users\\MyPC\\Documents\\GitHub\\AutoDemo\\learn-playwright\\tests\\login.spec.ts",
-                        "column": 20,
-                        "line": 107
-                      }
+                      "status": "expected"
                     }
                   ],
-                  "status": "unexpected"
+                  "id": "9f64860ef46439b2ace5-29b8358994aa5f5f3f28",
+                  "file": "forgotPw.spec.ts",
+                  "line": 102,
+                  "column": 14
                 }
-              ],
-              "id": "41d3fd2474a19feb00a1-e11a6e7d71c4fce98335",
-              "file": "login.spec.ts",
-              "line": 102,
-              "column": 10
+              ]
             }
           ]
         }
